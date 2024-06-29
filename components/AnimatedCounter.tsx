@@ -8,7 +8,7 @@ export default function AnimatedCounter({amount}: {amount:number}) {
       <CountUp
         decimal='.'
         prefix='#'
-        duration={2.5}
+        duration={1.5}
         decimals={2}
         end={amount}
       />

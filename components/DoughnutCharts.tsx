@@ -7,10 +7,10 @@ export default function DoughnutCharts({accounts = []}: DoughnutChartProps) {
     const data = {
         datasets: [{
             label: "Bank",
-            data: [1245,332,564],
+            data: [1245,3132,1064],
             backgroundColor: ['#0747b6', '#2265d8', '#2f91fa']
         }],
-        labels: ['Acess', 'GTB', 'Zenith']
+        labels: ['Access', 'GTB', 'Zenith']
     }
   return (
       <Doughnut 

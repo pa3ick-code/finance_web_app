@@ -11,13 +11,13 @@ export const sidebarLinks = [
   },
   {
     imgURL: "/icons/transaction.svg",
-    route: "/transaction",
+    route: "/transactions",
     label: "Transactions",
   },
   {
     imgURL: "/icons/money-send.svg",
     route: "/transfer",
-    label: "Transfer Funds",
+    label: "Transfer",
   },
 ];
 

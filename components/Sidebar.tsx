@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { sidebarLinks } from '@/constants';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
+import Footer from './Footer';
 
 export default function Sidebar({user}: SiderbarProps) {
   const pathname = usePathname();
@@ -33,7 +34,7 @@ export default function Sidebar({user}: SiderbarProps) {
                     <div className="relative size-6">
                       <Image 
                       src={imgURL}
-                      alt='menu icon'
+                      alt={label}
                       fill
                       className={cn({'brightness-[3] invert-0': isActive})}
                       />
@@ -47,7 +48,7 @@ export default function Sidebar({user}: SiderbarProps) {
         })}
         USER
       </nav>
-      FOOTER
+      <Footer user={user} type='desktop'/>
     </section>
   );
 }
