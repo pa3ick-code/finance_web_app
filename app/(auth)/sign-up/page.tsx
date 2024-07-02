@@ -1,5 +1,5 @@
 import AuthForm from "@/components/AuthForm";
-import { getLoggedInUser } from "@/lib/actions/user.action";
+import { getLoggedInUser } from "@/lib/actions/user.actions";
 
 export default async function SignIn() {
   const loggedInUser = await getLoggedInUser();

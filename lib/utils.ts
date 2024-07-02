@@ -1,6 +1,7 @@
 /* eslint-disable no-prototype-builtins */
 // import { AccountTypes, CategoryCount, Transaction } from "@/types";
 import { type ClassValue, clsx } from "clsx";
+import { statSync } from "fs";
 import qs from "query-string";
 import { twMerge } from "tailwind-merge";
 import { z } from "zod";
@@ -202,10 +203,10 @@ export const authFormSchema = (type: string) => z.object({
   lastName: type === 'sign-in'? z.string().optional() :  z.string(),
   address1: type === 'sign-in'? z.string().optional() :  z.string().max(50),
   postalCode: type === 'sign-in'? z.string().optional() :  z.string().min(3).max(6),
-  city: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(10),
-  state: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(10),
+  city: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(50),
+  state: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(50),
   dateOfBirth: type === 'sign-in'? z.string().optional() :  z.string(),
-  nin: type === 'sign-in'? z.string().optional() :  z.string().min(10),
+  ssn: type === 'sign-in'? z.string().optional() :  z.string().min(4),
   
   //sign in
   email: z.string().email(),
