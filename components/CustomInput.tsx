@@ -18,11 +18,18 @@ interface CustomInputProps{
   label: string;
   placeholder: string;
   type?: string;
+<<<<<<< HEAD
   control: Control<z.infer<typeof formSchema>>;
   disabled: boolean;
 }
 
 export default function CustomInput({name, type, label, placeholder, control, disabled}: CustomInputProps) {
+=======
+  control: Control<z.infer<typeof formSchema>>
+}
+
+export default function CustomInput({name, type, label, placeholder, control}: CustomInputProps) {
+>>>>>>> origin/main
   return (
     <div>
        <FormField
@@ -37,7 +44,10 @@ export default function CustomInput({name, type, label, placeholder, control, di
                   placeholder={placeholder}
                   className="input-class"
                   type={type}
+<<<<<<< HEAD
                   disabled = {disabled}
+=======
+>>>>>>> origin/main
                   {...field}
                 /> 
               </FormControl>

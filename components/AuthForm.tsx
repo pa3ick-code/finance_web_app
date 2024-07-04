@@ -10,10 +10,16 @@ import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomInput from "./CustomInput";
+<<<<<<< HEAD
 import PlaidLink from "./PlaidLink";
 import { Loader2 } from "lucide-react";
 import { authFormSchema } from "@/lib/utils";
 import { signIn, signUp } from "@/lib/actions/user.actions";
+=======
+import { Loader2 } from "lucide-react";
+import { authFormSchema } from "@/lib/utils";
+import { signIn, signUp } from "@/lib/actions/user.action";
+>>>>>>> origin/main
 import { useRouter } from "next/navigation";
 
 export default function AuthForm({type}: AuthFormProps) {
@@ -36,6 +42,7 @@ export default function AuthForm({type}: AuthFormProps) {
   const onSubmit = async(data: z.infer<typeof formSchema>)=> {
     setIsLoading(true);
     try {
+<<<<<<< HEAD
       const userData = {
         firstName: data.firstName!,
         lastName: data.lastName!,
@@ -49,16 +56,26 @@ export default function AuthForm({type}: AuthFormProps) {
         password: data.password,
 
       }
+=======
+>>>>>>> origin/main
       if(type === 'sign-in'){
         const res = await signIn({
           email: data.email,
           password: data.password,
         });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
         if(res) router.push('/');
       }
 
       if(type === 'sign-up'){
+<<<<<<< HEAD
         const newUser = await signUp(userData);
+=======
+        const newUser = await signUp(data);
+>>>>>>> origin/main
 
         setUser(newUser)
       }
@@ -104,12 +121,17 @@ export default function AuthForm({type}: AuthFormProps) {
 
       </header>
       {user? (
+<<<<<<< HEAD
         <div className="flex flex-col gap-4">
           {/* //Plaid */}
            <PlaidLink  user={user} variant="primary"/>
            <p>user: user_good | password: pass_goood</p>
         </div>
       ): ( 
+=======
+        <div className="flex flex-col gap-4"></div>
+      ): (
+>>>>>>> origin/main
         <>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -121,14 +143,20 @@ export default function AuthForm({type}: AuthFormProps) {
                           label="Firstname"
                           placeholder="Firstname"
                           control={form.control}
+<<<<<<< HEAD
                           disabled={isLoading}
+=======
+>>>>>>> origin/main
                         />
                         <CustomInput 
                           name="lastName"
                           label="Lastname"
                           placeholder="Lastname"
                           control={form.control}
+<<<<<<< HEAD
                           disabled={isLoading}
+=======
+>>>>>>> origin/main
                         />
                       </div>
 
@@ -137,7 +165,10 @@ export default function AuthForm({type}: AuthFormProps) {
                         label="Address"
                         placeholder="Address"
                         control={form.control}
+<<<<<<< HEAD
                         disabled={isLoading}
+=======
+>>>>>>> origin/main
                       />
 
                       <CustomInput 
@@ -145,7 +176,10 @@ export default function AuthForm({type}: AuthFormProps) {
                         label="State"
                         placeholder="Enter your state  "
                         control={form.control}
+<<<<<<< HEAD
                         disabled={isLoading}
+=======
+>>>>>>> origin/main
                       />
 
                       <div className="flex gap-4">
@@ -154,14 +188,20 @@ export default function AuthForm({type}: AuthFormProps) {
                           label="Postal Code"
                           placeholder="Postal code eg. 101-111"
                           control={form.control}
+<<<<<<< HEAD
                           disabled={isLoading}
+=======
+>>>>>>> origin/main
                         />
                         <CustomInput 
                           name="city"
                           label="City"
                           placeholder="Example: Lagos"
                           control={form.control}
+<<<<<<< HEAD
                           disabled={isLoading}
+=======
+>>>>>>> origin/main
                         />
                       </div>
                       <div className="flex gap-4">
@@ -170,6 +210,7 @@ export default function AuthForm({type}: AuthFormProps) {
                           label="Date of birth"
                           placeholder="Date of birth"
                           control={form.control}
+<<<<<<< HEAD
                           disabled={isLoading}
                         />
                         <CustomInput 
@@ -178,6 +219,14 @@ export default function AuthForm({type}: AuthFormProps) {
                           placeholder="NIN"
                           control={form.control}
                       disabled={isLoading}
+=======
+                        />
+                        <CustomInput 
+                          name="nin"
+                          label="NIN"
+                          placeholder="NIN"
+                          control={form.control}
+>>>>>>> origin/main
                         />
                       </div>
                     </>
@@ -188,7 +237,10 @@ export default function AuthForm({type}: AuthFormProps) {
                       label="Email"
                       placeholder="email"
                       control={form.control}
+<<<<<<< HEAD
                       disabled={isLoading}
+=======
+>>>>>>> origin/main
                     />
                     <CustomInput 
                       name="password"
@@ -196,7 +248,10 @@ export default function AuthForm({type}: AuthFormProps) {
                       placeholder="password"
                       type="password"
                       control={form.control}
+<<<<<<< HEAD
                       disabled={isLoading}
+=======
+>>>>>>> origin/main
                     />
 
                     <div className="flex flex-col gap-4">

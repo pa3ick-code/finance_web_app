@@ -5,7 +5,10 @@ import { sidebarLinks } from '@/constants';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
 import Footer from './Footer';
+<<<<<<< HEAD
 import PlaidLink from './PlaidLink';
+=======
+>>>>>>> origin/main
 
 export default function Sidebar({user}: SiderbarProps) {
   const pathname = usePathname();
