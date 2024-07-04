@@ -1,7 +1,5 @@
 /* eslint-disable no-prototype-builtins */
-// import { AccountTypes, CategoryCount, Transaction } from "@/types";
 import { type ClassValue, clsx } from "clsx";
-import { statSync } from "fs";
 import qs from "query-string";
 import { twMerge } from "tailwind-merge";
 import { z } from "zod";
@@ -69,9 +67,9 @@ export const formatDateTime = (dateString: Date) => {
 };
 
 export function formatAmount(amount: number): string {
-  const formatter = new Intl.NumberFormat("en-NG", {
+  const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "NGN",
+    currency: "USD",
     minimumFractionDigits: 2,
   });
 
@@ -198,17 +196,16 @@ export const getTransactionStatus = (date: Date) => {
 };
 
 export const authFormSchema = (type: string) => z.object({
-  //Sign up
-  firstName: type === 'sign-in'? z.string().optional() :  z.string(),
-  lastName: type === 'sign-in'? z.string().optional() :  z.string(),
-  address1: type === 'sign-in'? z.string().optional() :  z.string().max(50),
-  postalCode: type === 'sign-in'? z.string().optional() :  z.string().min(3).max(6),
-  city: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(50),
-  state: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(50),
-  dateOfBirth: type === 'sign-in'? z.string().optional() :  z.string(),
-  ssn: type === 'sign-in'? z.string().optional() :  z.string().min(4),
-  
-  //sign in
+  // sign up
+  firstName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
+  lastName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
+  address1: type === 'sign-in' ? z.string().optional() : z.string().max(50),
+  city: type === 'sign-in' ? z.string().optional() : z.string().max(50),
+  state: type === 'sign-in' ? z.string().optional() : z.string().min(2).max(2),
+  postalCode: type === 'sign-in' ? z.string().optional() : z.string().min(3).max(6),
+  dateOfBirth: type === 'sign-in' ? z.string().optional() : z.string().min(3),
+  ssn: type === 'sign-in' ? z.string().optional() : z.string().min(3),
+  // both
   email: z.string().email(),
   password: z.string().min(8),
 })

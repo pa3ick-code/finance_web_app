@@ -107,6 +107,7 @@ export default function AuthForm({type}: AuthFormProps) {
         <div className="flex flex-col gap-4">
           {/* //Plaid */}
            <PlaidLink  user={user} variant="primary"/>
+           <p>user: user_good | password: pass_goood</p>
         </div>
       ): ( 
         <>

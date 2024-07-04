@@ -51,6 +51,7 @@ declare type NewUserParams = {
 };
 
 declare type Account = {
+  [x: string]: string;
   id: string;
   availableBalance: number;
   currentBalance: number;
@@ -90,7 +91,7 @@ declare type Bank = {
   accessToken: string;
   fundingSourceUrl: string;
   userId: string;
-  sharableId: string;
+  shareableId: string;
 };
 
 declare type AccountTypes =
@@ -204,7 +205,7 @@ declare interface BankTabItemProps {
   appwriteItemId?: string;
 }
 
-declare interface TotlaBalanceBoxProps {
+declare interface TotalBalanceBoxProps {
   accounts: Account[];
   totalBanks: number;
   totalCurrentBalance: number;

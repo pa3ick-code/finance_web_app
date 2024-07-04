@@ -45,7 +45,7 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
           type: accountData.type as string,
           subtype: accountData.subtype! as string,
           appwriteItemId: bank.$id,
-          shareableId: bank.sharableId,
+          sharaebleId: bank.shareableId,
         };
 
         return account;
@@ -170,7 +170,7 @@ export const getTransactions = async ({
         accountId: transaction.account_id,
         amount: transaction.amount,
         pending: transaction.pending,
-        category: transaction.category ? transaction.category[0] : "",
+        category: transaction.personal_finance_category ? transaction.personal_finance_category.primary : "",
         date: transaction.date,
         image: transaction.logo_url,
       }));
