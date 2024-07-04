@@ -1,4 +1,3 @@
-
 /* eslint-disable no-unused-vars */
 
 declare type SearchParamProps = {
@@ -9,14 +8,14 @@ declare type SearchParamProps = {
 // ========================================
 
 declare type SignUpParams = {
-  firstName?: string;
-  lastName?: string;
-  address1?: string;
-  city?: string;
-  state?: string;
-  postalCode?: string;
-  dateOfBirth?: string;
-  ssn?: string;
+  firstName: string;
+  lastName: string;
+  address1: string;
+  city: string;
+  state: string;
+  postalCode: string;
+  dateOfBirth: string;
+  ssn: string;
   email: string;
   password: string;
 };
@@ -51,7 +50,6 @@ declare type NewUserParams = {
 };
 
 declare type Account = {
-  [x: string]: string;
   id: string;
   availableBalance: number;
   currentBalance: number;
@@ -62,7 +60,7 @@ declare type Account = {
   type: string;
   subtype: string;
   appwriteItemId: string;
-  sharableId: string;
+  shareableId: string;
 };
 
 declare type Transaction = {
@@ -213,7 +211,7 @@ declare interface TotalBalanceBoxProps {
 
 declare interface FooterProps {
   user: User;
-  type?: 'mobile' | 'desktop';
+  type?: 'mobile' | 'desktop'
 }
 
 declare interface RightSidebarProps {
