@@ -1,5 +1,4 @@
 /* eslint-disable no-prototype-builtins */
-// import { AccountTypes, CategoryCount, Transaction } from "@/types";
 import { type ClassValue, clsx } from "clsx";
 import qs from "query-string";
 import { twMerge } from "tailwind-merge";
@@ -197,7 +196,6 @@ export const getTransactionStatus = (date: Date) => {
 };
 
 export const authFormSchema = (type: string) => z.object({
-<<<<<<< HEAD
   // sign up
   firstName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
   lastName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
@@ -208,19 +206,6 @@ export const authFormSchema = (type: string) => z.object({
   dateOfBirth: type === 'sign-in' ? z.string().optional() : z.string().min(3),
   ssn: type === 'sign-in' ? z.string().optional() : z.string().min(3),
   // both
-=======
-  //Sign up
-  firstName: type === 'sign-in'? z.string().optional() :  z.string(),
-  lastName: type === 'sign-in'? z.string().optional() :  z.string(),
-  address1: type === 'sign-in'? z.string().optional() :  z.string().max(50),
-  postalCode: type === 'sign-in'? z.string().optional() :  z.string().min(3).max(6),
-  city: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(10),
-  state: type === 'sign-in'? z.string().optional() :  z.string().min(2).max(10),
-  dateOfBirth: type === 'sign-in'? z.string().optional() :  z.string(),
-  nin: type === 'sign-in'? z.string().optional() :  z.string().min(10),
-  
-  //sign in
->>>>>>> origin/main
   email: z.string().email(),
   password: z.string().min(8),
 })

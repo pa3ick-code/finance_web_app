@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import HeaderBox from '@/components/HeaderBox'
 import { Pagination } from '@/components/Pagination';
 import TransactionsTable from '@/components/TransactionsTable';
@@ -74,14 +73,3 @@ const currentTransactions = account?.transactions.slice(
 }
 
 export default TransactionHistory
-=======
-import React from 'react';
-
-export default function Transactions() {
-  return (
-    <div>
-      
-    </div>
-  );
-}
->>>>>>> origin/main

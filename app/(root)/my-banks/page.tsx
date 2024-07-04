@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import BankCard from '@/components/BankCard';
 import HeaderBox from '@/components/HeaderBox'
 import { getAccounts } from '@/lib/actions/bank.actions';
@@ -39,14 +38,3 @@ const MyBanks = async () => {
 }
 
 export default MyBanks
-=======
-import React from 'react';
-
-export default function MyBank() {
-  return (
-    <div>
-      
-    </div>
-  );
-}
->>>>>>> origin/main

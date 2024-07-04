@@ -119,7 +119,7 @@ export async function getLoggedInUser() {
   }
 }
 
-export const logOutAccount = async () => {
+export const logoutAccount = async () => {
   try {
     const { account } = await createSessionClient();
 
