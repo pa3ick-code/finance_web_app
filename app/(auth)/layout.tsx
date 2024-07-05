@@ -17,10 +17,9 @@ export default async function RootLayout({
         <div className="auth-asset">
           <div>
             <Image
-            src="/icons/auth-image.svg"
+            src="/images/auth-image.jpg"
             alt=" auth image"
-            width={500}
-            height={500}
+            fill
             />
   
           </div>

@@ -167,6 +167,13 @@ const AuthForm = ({ type }: { type: string }) => {
               {type === 'sign-in' ? 'Sign up' : 'Sign in'}
             </Link>
           </footer>
+
+              {type === "sign-in" && (
+                 <div className='text-sm flex flex-col justify-center items-center'>
+                  <h2 className='font-semibold'>Default</h2>
+                  <p className='text-xs'>User: Kafemous@gmail.com | Pass: 11111111 or Sign up</p>
+                </div>
+              )}
         </>
       )}
     </section>
