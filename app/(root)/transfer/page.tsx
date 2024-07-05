@@ -5,10 +5,18 @@ import { getLoggedInUser } from '@/lib/actions/user.actions';
 import React from 'react'
 
 const Transfer = async () => {
-  const loggedIn = await getLoggedInUser();
-  const accounts = await getAccounts({ 
+  let loggedIn: { $id: any; firstName: string; };
+  let accounts ;
+
+  try {
+      loggedIn = await getLoggedInUser();
+      accounts = await getAccounts({ 
     userId: loggedIn.$id 
   })
+  } catch (error) {
+    console.log("no account")
+  }
+  
 
   if(!accounts) return;
   
